@@ -50,12 +50,12 @@ export const SkillData = [
     width: 80,
     height: 80,
   },
-  {
-    name: "Next js 13",
-    Image: "/next.png",
-    width: 80,
-    height: 80,
-  },
+  // {
+  //   name: "Next js 13",
+  //   Image: "/next.png",
+  //   width: 80,
+  //   height: 80,
+  // },
   // {
   //   name: "Framer Motion",
   //   Image: "/framer.png",
@@ -68,18 +68,18 @@ export const SkillData = [
   //   width: 80,
   //   height: 80,
   // },
-  {
-    name: "Node js",
-    Image: "/node-js.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    name: "Mongo db",
-    Image: "/mongodb.png",
-    width: 40,
-    height: 40,
-  },
+  // {
+  //   name: "Node js",
+  //   Image: "/node-js.png",
+  //   width: 80,
+  //   height: 80,
+  // },
+  // {
+  //   name: "Mongo db",
+  //   Image: "/mongodb.png",
+  //   width: 40,
+  //   height: 40,
+  // },
 ];
 
 export const Socials = [
