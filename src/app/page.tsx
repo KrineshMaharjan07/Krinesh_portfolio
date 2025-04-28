@@ -60,9 +60,11 @@ const Home = () => {
               className="relative w-64 h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-full overflow-hidden
              border-4 border-white/50 shadow-2xl"
             >
-              <img
-                src="profile.jpg" // Replace with your image path
+              <Image
+                src="/profile.jpg"
                 alt="Krinesh Maharjan"
+                width={500}
+                height={300}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -110,7 +112,13 @@ const Home = () => {
           <>
             <div className="bg-white border">
               <div className="max-w-sm rounded overflow-hidden shadow-lg">
-                <img className="w-full" src="EMS.png" alt="EMS" />
+                <Image
+                  className="w-full"
+                  src="/EMS.png"
+                  width={500}
+                  height={300}
+                  alt="EMS"
+                />
                 <div className="px-6 py-4">
                   <div className="font-bold text-xl mb-2">
                     Employee Management System
@@ -152,7 +160,13 @@ const Home = () => {
           <>
             <div className="bg-white ">
               <div className="max-w-sm rounded overflow-hidden shadow-lg">
-                <img className="w-full" src="CMS.png" alt="CMS" />
+                <Image
+                  className="w-full"
+                  src="/CMS.png"
+                  width={500}
+                  height={300}
+                  alt="CMS"
+                />
                 <div className="px-6 py-4">
                   <div className="font-bold text-xl mb-2">
                     Canteen Management System
