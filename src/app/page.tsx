@@ -2,7 +2,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { SkillData, Projects, Socials } from "@/constants";
+
+import { SkillData, Socials } from "@/constants";
 
 const Home = () => {
   return (
@@ -13,40 +14,58 @@ const Home = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url(/port2.jpg)" }}
         >
-          <div className="absolute inset-0 bg-black/50 "></div>
+          <div className="absolute inset-0 bg-black/50"></div>
         </div>
-        <div className="relative z-10 flex flex-col justify-center h-full px-6 md:px-20 lg:px-40">
-          <h1 className="text-[42px] md:text-[50px] text-white font-bold leading-tight">
-            Hello,
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500">
-              {" "}
-              I'm Krinesh Maharjan
-            </span>
-          </h1>
-          <p className="text-gray-300 mt-3 max-w-[650px] hidden md:block">
-            A passionate Web Developer eager to build innovative and
-            user-friendly websites. I specialize in React, PHP, and Tailwind CSS
-            and am always excited to explore new technologies.
-          </p>
-          <div className="flex gap-4 mt-6">
-            <a
-              href="#skills"
-              className="px-6 py-3 rounded-xl bg-blue-500 hover:bg-blue-400 text-lg text-white transition duration-300 shadow-lg"
+
+        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between h-full px-6 md:px-20 lg:px-40">
+          {/* Text Content (Left Side) */}
+          <div className="md:w-1/2">
+            <h1 className="text-[42px] md:text-[50px] text-white font-bold leading-tight">
+              Hello,
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500">
+                {" "}
+                I am Krinesh Maharjan
+              </span>
+            </h1>
+            <p className="text-gray-300 text-xl md:text-3xl mt-3 max-w-[650px]">
+              A passionate Web Developer eager to build innovative and
+              user-friendly websites. I specialize in PHP, Laravel, Tailwind CSS
+              and React JS and I am always excited to explore new technologies.
+            </p>
+            <div className="flex gap-4 mt-6 flex-wrap">
+              <a
+                href="#skills"
+                className="px-6 py-3 rounded-xl bg-blue-500 hover:bg-blue-400 text-lg text-white transition duration-300 shadow-lg"
+              >
+                Learn More
+              </a>
+              <a
+                href="#projects"
+                className="px-6 py-3 rounded-xl border border-white text-lg text-white transition duration-300 hover:bg-white hover:text-black shadow-lg"
+              >
+                My Projects
+              </a>
+              <a
+                href="#contact"
+                className="px-6 py-3 rounded-xl border border-white text-lg text-white transition duration-300 hover:bg-white hover:text-black shadow-lg"
+              >
+                Contact Me
+              </a>
+            </div>
+          </div>
+
+          {/* Image (Right Side) - Only visible on medium screens and up */}
+          <div className="hidden md:flex md:flex-1 justify-end items-center pr-0 lg:pr-12 xl:pr-24">
+            <div
+              className="relative w-64 h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-full overflow-hidden
+             border-4 border-white/50 shadow-2xl"
             >
-              Learn More
-            </a>
-            <a
-              href="#projects"
-              className="px-6 py-3 rounded-xl border border-white text-lg text-white transition duration-300 hover:bg-white hover:text-black shadow-lg"
-            >
-              My Projects
-            </a>
-            <a
-              href="#contact"
-              className="px-6 py-3 rounded-xl border border-white text-lg text-white transition duration-300  hover:bg-white hover:text-black shadow-lg"
-            >
-              Contact Me
-            </a>
+              <img
+                src="profile.jpg" // Replace with your image path
+                alt="Krinesh Maharjan"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -116,9 +135,6 @@ const Home = () => {
                   </span>
                   <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
                     #javascript
-                  </span>
-                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                    #mysql
                   </span>
                   <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
                     #mysql
