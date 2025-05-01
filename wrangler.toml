@@ -1,5 +1,7 @@
 name = "krinesh-portfolio"
-type = "javascript"
+main = "src/worker.js"
+compatibility_date = "2024-05-01"
 
 [site]
 bucket = "./out"
+

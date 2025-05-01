@@ -1,12 +1,9 @@
 const worker = {
-  async fetch(request, env) {
-    try {
-      // Try to fetch the static file from the bucket
-      return await env.ASSETS.fetch(request);
-    } catch (err) {
-      console.log("Static asset not found:", request.url);
-      return new Response("Not Found", { status: 404 });
-    }
+  async fetch(request) {
+    console.log(request.method);
+    return new Response(html, {
+      headers: { 'Content-Type': 'text/html' },
+    });
   },
 };
 
