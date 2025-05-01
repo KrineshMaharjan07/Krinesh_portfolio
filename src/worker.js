@@ -1,19 +1,12 @@
-const html = `<!DOCTYPE html>
-<html>
-  <head>
-    <title>My Portfolio</title>
-  </head>
-  <body>
-    <h1>Hello from static HTML!</h1>
-  </body>
-</html>`;
-
 const worker = {
-  async fetch(request) {
-    console.log(request.method);
-    return new Response(html, {
-      headers: { 'Content-Type': 'text/html' },
-    });
+  async fetch(request, env) {
+    try {
+      // Try to fetch the static file from the bucket
+      return await env.ASSETS.fetch(request);
+    } catch (err) {
+      console.log("Static asset not found:", request.url);
+      return new Response("Not Found", { status: 404 });
+    }
   },
 };
 
