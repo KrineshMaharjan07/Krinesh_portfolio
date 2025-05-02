@@ -1,7 +1,7 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+}
 
-const nextConfig: NextConfig = {
-  output: "export", // Enables static export
-};
-
-export default nextConfig;
+export default nextConfig
