@@ -1,6 +1,0 @@
-name = "krinesh-portfolio"
-compatibility_date = "2024-05-01"
-
-[site]
-bucket = "./out"
-entry-point = "workers-site"
