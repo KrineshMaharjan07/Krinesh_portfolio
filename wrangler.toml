@@ -1,7 +1,6 @@
 name = "krinesh-portfolio"
-main = "src/worker.js"
 compatibility_date = "2024-05-01"
 
 [site]
 bucket = "./out"
-
+entry-point = "workers-site"
