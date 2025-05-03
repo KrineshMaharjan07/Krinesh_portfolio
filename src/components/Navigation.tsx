@@ -5,26 +5,26 @@ import React, { useEffect, useState } from "react";
 import Transition from "./Transition";
 
 const Navigation = () => {
-  const [isRouting, setisRouting] = useState(false);
+  const [isRouting, setIsRouting] = useState(false);
   const path = usePathname();
-  const [prevPath, setprevPath] = useState("/");
+  const [prevPath, setPrevPath] = useState("/");
 
   useEffect(() => {
     if (prevPath !== path) {
-      setisRouting(true);
+      setIsRouting(true);
     }
-  }, [path, prevPath]); // ✅ Added prevPath as dependency
+  }, [path, prevPath]); // ✅ Add both path and prevPath to the dependency array
 
   useEffect(() => {
     if (isRouting) {
-      setprevPath(path);
+      setPrevPath(path);
       const timeout = setTimeout(() => {
-        setisRouting(false);
+        setIsRouting(false);
       }, 1200);
 
       return () => clearTimeout(timeout);
     }
-  }, [isRouting]);
+  }, [isRouting, path]); // Ensure path is a dependency here to update prevPath correctly
 
   return (
     <div
